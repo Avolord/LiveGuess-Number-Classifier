@@ -1,0 +1,47 @@
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Perceptron
+  </title>
+  <style type="text/css">
+    p {
+      visibility: visible;
+      position: absolute;
+      left: 20;
+      color: red;
+    }
+    #guess {
+      font-size: 40;
+      position: relative;
+    }
+    form {
+      position: relative;
+      left: 10%;
+    }
+  </style>
+</head>
+<script src="AvoDraw.js"></script>
+
+<body onload="setup()">
+  <p id="Count">0</p>
+  <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+    <input type="file" id="jsoninput" onchange="handleFiles(this.files)"
+              accept=".json">
+</form>
+<p id="guess">Number : __ with __ %</p>
+</body>
+<script>
+  Canvas = new CanDraw(560, 560, "rgb(25,25,25)", 1);
+  Canvas.Translate(0,0);
+  let width = Canvas.Element.width;
+  let height = Canvas.Element.height;
+</script>
+<script src="AvoLoop.js"></script>
+<script src="AvoMatrix.js"></script>
+<script src="AvoNet.js"></script>
+<script src="liveguess.js"></script>
+<script src="setup.js"></script>
+
+</html>
